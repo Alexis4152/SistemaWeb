@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn" name="MyApp" packages="">
+
+    <!-- LOCAL -->
+	<Properties>
+		<Property name="baseDir">C:/ComplementoPago/java/logs/</Property>
+	</Properties>
+<!-- PRODUCCION 
+	<Properties>
+		<Property name="baseDir">/opt/IBM/Liberty20/wlp/usr/servers/ComPago/logs/</Property>
+	</Properties>-->
+
+    <Appenders>
+    <RollingFile name="RollingFile" filename="${baseDir}/Curso.log"
+    			filePattern="${baseDir}/$${date:yyyy-MM}/Curso-%d{yyyy-MM-dd}.log.gz">
+    			<PatternLayout pattern= "%d %p %c{1.} [%t] %m%n"/>
+    			<CronTriggeringPolicy schedule="0 0 0 * * ?"/>
+    			
+    </RollingFile>
+    </Appenders>
+
+	<Loggers>
+        <Root level="trace">
+        	<AppenderRef ref = "RollingFile"/>
+        </Root>
+        
+    </Loggers> 
+    			
+    
+</Configuration>
