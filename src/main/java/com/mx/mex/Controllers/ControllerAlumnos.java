@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.mx.mex.Dto.Alumnos;
 import com.mx.mex.Services.IAlumnos;
 
-
+// ESTE ES UN COMENTARIO PARA SUBIR A REPO REMOTO
 // SPRINGFRAMEWORK - 4.0
 @Controller // HACE NUESTRA CLASE EN CONTROLADOR
 @RequestMapping("Alumnos")
 public class ControllerAlumnos {
 
-	@Autowired //INYECCIÓN DE DEPENDENCIAS - CONECTAR CON SERVICIO O REPOSITORIO O ALGUNA OTRA CLASE DE SPRING
+	@Autowired //INYECCIï¿½N DE DEPENDENCIAS - CONECTAR CON SERVICIO O REPOSITORIO O ALGUNA OTRA CLASE DE SPRING
 	private IAlumnos iAlumnos;
 	
 	//SERVICIO
